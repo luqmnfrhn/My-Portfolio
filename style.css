@@ -658,6 +658,10 @@ section {
   width: 24px;
   height: 24px;
 }
+.skill-tile i {
+  font-size: 2rem;
+  line-height: 1;
+}
 
 .skill-tile-name {
   font-size: 0.7rem;
