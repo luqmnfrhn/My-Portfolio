@@ -360,6 +360,11 @@ section {
   line-height: 1.8;
 }
 
+.section-sub.centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* About */
 .about-grid {
   display: grid;
@@ -402,6 +407,20 @@ section {
   font-weight: 700;
   font-family: var(--font-body);
   line-height: 1.4;
+}
+
+.about-photo-note {
+  font-size: 0.65rem;
+  opacity: 0.6;
+}
+
+.about-experience-count {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.accent-text {
+  color: var(--accent);
 }
 
 .about-text p {
