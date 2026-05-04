@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartSchool — Luqman Farhan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="inner">
+      <a href="index.html" class="nav-logo">LF.dev</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PROJECT DETAIL -->
+  <main class="project-detail">
+    <div class="container">
+
+      <a href="index.html#projects" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Back to Projects
+      </a>
+
+      <div class="project-header reveal">
+        <div class="project-header-meta">
+          <div class="project-tags">
+            <span class="tag accent">Featured</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">AWS</span>
+          </div>
+          <h1 class="project-detail-title">SmartSchool</h1>
+          <p class="project-tagline">Multi-tenant school management platform — from classroom to parents.</p>
+        </div>
+
+        <div class="project-header-cta">
+          <a href="https://smartschools.my" target="_blank" rel="noopener" class="btn btn-primary">
+            View Live →
+          </a>
+        </div>
+      </div>
+
+      <div class="project-screenshot smartschool-showcase reveal">
+        <img src="logo_smartschools.png" alt="SmartSchool logo" class="smartschool-logo-img" />
+      </div>
+
+      <div class="project-content reveal">
+        <div class="project-body">
+          <h2 class="content-heading">Overview</h2>
+          <p>SmartSchool is a multi-tenant SaaS platform built for Malaysian schools. Each school gets its own isolated subdomain. Admins and teachers manage daily operations via a web dashboard, while parents monitor their children through a dedicated mobile app on iOS and Android.</p>
+
+          <h2 class="content-heading">The Challenge</h2>
+          <p>Enforcing strict multi-tenancy isolation — keeping each school&apos;s data completely separate while running on shared AWS infrastructure. Layered on top of that: building a unified real-time notification pipeline that reaches both web and mobile from a single backend service.</p>
+
+          <h2 class="content-heading">What I Built</h2>
+          <ul class="feature-list">
+            <li>Multi-tenant architecture with per-school subdomain routing</li>
+            <li>Student enrollment and attendance tracking system</li>
+            <li>Teacher and timetable management modules</li>
+            <li>Announcement system with Firebase push notifications for mobile</li>
+            <li>Admin dashboard built with Next.js and cross-platform mobile app in Flutter</li>
+            <li>RESTful API with Node.js, Prisma ORM, and PostgreSQL deployed on AWS</li>
+          </ul>
+        </div>
+
+        <aside class="project-sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-label">Tech Stack</div>
+            <div class="stack-tiles">
+              <div class="stack-tile">
+                <i class="devicon-flutter-plain colored"></i>
+                <span>Flutter</span>
+              </div>
+              <div class="stack-tile">
+                <i class="devicon-dart-plain colored"></i>
+                <span>Dart</span>
+              </div>
+              <div class="stack-tile">
+                <i class="devicon-nextjs-plain"></i>
+                <span>Next.js</span>
+              </div>
+              <div class="stack-tile">
+                <i class="devicon-nodejs-plain colored"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="stack-tile">
+                <i class="devicon-postgresql-plain colored"></i>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="stack-tile">
+                <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+                <span>AWS</span>
+              </div>
+              <div class="stack-tile">
+                <i class="devicon-firebase-plain colored"></i>
+                <span>Firebase</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-label">Project Info</div>
+            <div class="info-list">
+              <div class="info-item">
+                <span class="info-key">Year</span>
+                <span class="info-val">2025</span>
+              </div>
+              <div class="info-item">
+                <span class="info-key">Type</span>
+                <span class="info-val">Web + Mobile</span>
+              </div>
+              <div class="info-item">
+                <span class="info-key">Role</span>
+                <span class="info-val">Team Lead &amp; Full Stack Developer</span>
+              </div>
+              <div class="info-item">
+                <span class="info-key">Live</span>
+                <a href="https://smartschools.my" target="_blank" rel="noopener" class="info-link">View →</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="platform-section reveal">
+        <h2 class="platform-heading">Platform</h2>
+        <div class="platform-grid">
+          <div class="platform-card">
+            <div class="platform-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <div class="platform-card-body">
+              <div class="platform-name">Dashboard</div>
+              <div class="platform-users">Admin &amp; Teacher</div>
+              <p class="platform-desc">Manage enrollment, attendance, timetable, and announcements via web browser.</p>
+            </div>
+          </div>
+
+          <div class="platform-card">
+            <div class="platform-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2"/>
+                <path d="M12 18h.01"/>
+              </svg>
+            </div>
+            <div class="platform-card-body">
+              <div class="platform-name">Mobile App</div>
+              <div class="platform-users">Admin, Teacher &amp; Parent</div>
+              <p class="platform-desc">iOS &amp; Android app for on-the-go school management and parent monitoring.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Luqman Farhan — Designed &amp; built with care</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
