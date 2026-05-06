@@ -290,7 +290,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(255,255,255,.35);
+  background: rgba(255,255,255,.65);
   cursor: pointer;
   transition: background .2s, transform .2s;
   border: none;
@@ -303,7 +303,7 @@
 }
 
 .ss-dot:hover {
-  background: rgba(255,255,255,.65);
+  background: rgba(255,255,255,.85);
 }
 
 /* ── Platform section ───────────────────────────────── */
