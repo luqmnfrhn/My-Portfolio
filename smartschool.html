@@ -62,10 +62,10 @@
 
       <div class="ss-carousel reveal" role="region" aria-label="SmartSchools screenshots">
         <div class="ss-track">
-          <div class="ss-slide"><img src="placeholder_web_1.png" alt="Dashboard overview"></div>
-          <div class="ss-slide"><img src="placeholder_web_2.png" alt="Attendance tracking" loading="lazy"></div>
-          <div class="ss-slide"><img src="placeholder_mobile_1.png" alt="Mobile home screen" loading="lazy"></div>
-          <div class="ss-slide"><img src="placeholder_mobile_2.png" alt="Mobile announcements" loading="lazy"></div>
+          <div class="ss-slide"><img src="carousel/4.png" alt="Dashboard overview"></div>
+          <div class="ss-slide"><img src="carousel/5.png" alt="Attendance tracking" loading="lazy"></div>
+          <div class="ss-slide"><img src="carousel/1.png" alt="Mobile home screen" loading="lazy"></div>
+          <div class="ss-slide"><img src="carousel/3.png" alt="Mobile announcements" loading="lazy"></div>
         </div>
         <div class="ss-progress"><div class="ss-bar"></div></div>
         <div class="ss-dots"></div>
@@ -192,5 +192,59 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  (function () {
+    const carousel = document.querySelector('.ss-carousel');
+    if (!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll('.ss-slide'));
+    const dotsContainer = carousel.querySelector('.ss-dots');
+    const bar = carousel.querySelector('.ss-bar');
+    const DURATION = 4500;
+    let current = 0;
+    let timer = null;
+    let paused = false;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'ss-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.querySelectorAll('.ss-dot'));
+
+    function show(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      bar.style.animation = 'none';
+      bar.offsetHeight;
+      bar.style.animation = 'ss-progress ' + DURATION + 'ms linear forwards';
+    }
+
+    function goTo(index) {
+      clearTimeout(timer);
+      show(index);
+      if (!paused) schedule();
+    }
+
+    function schedule() {
+      timer = setTimeout(() => {
+        show(current + 1);
+        schedule();
+      }, DURATION);
+    }
+
+    carousel.addEventListener('mouseenter', () => { paused = true; clearTimeout(timer); });
+    carousel.addEventListener('mouseleave', () => { paused = false; schedule(); });
+
+    slides[0].classList.add('active');
+    schedule();
+  })();
+  </script>
 </body>
 </html>
